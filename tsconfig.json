@@ -31,10 +31,11 @@
   },
   "include": [
     "./src/**/*.ts",
-    "./test/**/*.ts"
-, "src/index.js"  ],
+    "./test/**/*.ts",
+    "src/index.ts"
+  ],
   "exclude": [
-    "./node_modules/*",
+    "node_modules",
     "dist"
   ]
 }
