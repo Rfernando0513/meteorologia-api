@@ -1,5 +1,1 @@
-import supertest from 'supertest';
-
-declare global {
-  var testRequest: supertest.SuperTest<supertest.Test>;
-}
+declare var testRequest: import('supertest').SuperTest<import('supertest').Test>;
