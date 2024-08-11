@@ -1,5 +1,6 @@
 const { resolve } = require('path');
 const root = resolve(__dirname);
+
 module.exports = {
   rootDir: root,
   displayName: 'root-tests',
@@ -11,4 +12,5 @@ module.exports = {
     '@src/(.*)': '<rootDir>/src/$1',
     '@test/(.*)': '<rootDir>/test/$1',
   },
+  setupFilesAfterEnv: ['<rootDir>/test/jest-setup.ts'], 
 };

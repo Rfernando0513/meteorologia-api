@@ -1,8 +1,10 @@
 import { SetupServer } from '@src/server';
 import supertest, { SuperTest, Test } from 'supertest';
 
-beforeAll(() => {
+beforeAll(async () => {
+    console.log('Setting up test environment...');
     const server = new SetupServer();
-    server.init();
-    globalThis.testRequest = supertest(server.getApp()) as unknown as SuperTest<Test>;
+    await server.init();
+    global.testRequest = supertest(server.getApp()) as unknown as SuperTest<Test>;
+    console.log('Test environment setup complete.');
 });
